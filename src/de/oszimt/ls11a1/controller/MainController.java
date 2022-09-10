@@ -3,8 +3,10 @@
  */
 package de.oszimt.ls11a1.controller;
 
+import de.oszimt.ls11a1.helper.Log;
+import de.oszimt.ls11a1.model.Model;
 import de.oszimt.ls11a1.model.dao.IDao;
-import de.oszimt.ls11a1.view.MainWindow;
+import de.oszimt.ls11a1.view.IMainView;
 
 import java.util.Hashtable;
 
@@ -12,60 +14,76 @@ import java.util.Hashtable;
  * @author Kay Patzwald
  */
 public class MainController {
-	private final IDao dao;
-	private final MainWindow mainWindow;
-	private BaseController activController;
+	private Model model;
+	private final IMainView mainView;
+	private BaseController activeController;
 
 	private Hashtable<String, BaseController> controllerTable;
 
 	/** 
 	 * Main Controller of the app
 	 */
-	public MainController(IDao dao, MainWindow mainWindow) {
-		this.mainWindow = mainWindow;
-		this.dao = dao;
-		initController();
+	public MainController(Model model, IMainView mainView) {
+		this.mainView = mainView;
+		this.model = model;
+		init();
 	}
-	
+
 	/**
 	 * Init the controller.
 	 */
-	private void initController() {
+	private void init() {
 //		model.init();
-		mainWindow.init();
+		mainView.init(this);
 		controllerTable = new Hashtable<>();
-		controllerTable.put("mainView", new MainViewController(this));
-		controllerTable.put("viewCustomers", new ViewCustomersController(this));
-		setController("mainView");
+		addController(new ExitController(this));
+		addController(new MainViewController(this));
+		addController(new ViewCustomersController(this));
+		addController(new ViewCustomerController(this));
+		addController(new AddCustomerController(this));
+		setController("viewMain");
+	}
+
+	private void addController(BaseController controller){
+		controllerTable.put(controller.getId(), controller);
 	}
 	
 	/** COMMENT missing
 	 * @param controllerName
 	 */
 	public void setController(String controllerName) {
-		this.activController = controllerTable.get(controllerName);
-		this.activController.initController();
+		Log.debug("show controller "+controllerName);
+		this.activeController = controllerTable.get(controllerName);
+		this.activeController.initController();
 	}
 	
 	/** COMMENT missing
 	 * @param controllerName
 	 */
 	public void setController(String controllerName, Object data) {
-		this.activController = controllerTable.get(controllerName);
-		this.activController.initController(data);
+		this.activeController = controllerTable.get(controllerName);
+		this.activeController.initController(data);
 	}
 
 	/**
 	 * @return the dao
 	 */
-	public IDao getDao() {
-		return dao;
+	public Model getModel() {
+		return model;
 	}
 
 	/**
 	 * @return the mainView
 	 */
-	public MainWindow getMainWindow() {
-		return mainWindow;
+	public IMainView getMainView() {
+		return mainView;
+	}
+
+	public BaseController getController(String id){
+		if (!controllerTable.containsKey(id)){
+			Log.error(new NullPointerException("controllerTable does not contain a controller with the key id"),"Null");
+		}
+
+		return controllerTable.get(id);
 	}
 }

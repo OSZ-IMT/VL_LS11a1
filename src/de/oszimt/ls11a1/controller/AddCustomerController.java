@@ -7,13 +7,13 @@ package de.oszimt.ls11a1.controller;
  * @author Kay Patzwald (patzwald@oszimt.de)
  *
  */
-public class ViewCustomersController extends BaseController {
+public class AddCustomerController extends BaseController {
 
 	/**
 	 * @param controller
 	 */
-	public ViewCustomersController(MainController controller) {
-		super("viewCustomers","Alle Kunden anzeigen",controller);
+	public AddCustomerController(MainController controller) {
+		super("addCustomer","Kunde hinzufügen",controller);
 	}
 
 	@Override

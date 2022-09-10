@@ -7,21 +7,23 @@ package de.oszimt.ls11a1.controller;
  * @author Kay Patzwald (patzwald@oszimt.de)
  *
  */
-public class ViewCustomersController extends BaseController {
+public class ViewCustomerController extends BaseController {
 
 	/**
 	 * @param controller
 	 */
-	public ViewCustomersController(MainController controller) {
-		super("viewCustomers","Alle Kunden anzeigen",controller);
+	public ViewCustomerController(MainController controller) {
+		super("viewCustomer","Kunde anzeigen",controller);
 	}
 
 	@Override
 	protected void initController() {
-		initView();
 	}
 
 	@Override
-	protected void initController(Object data) {	}
+	protected void initController(Object data) {
+		initView();
+		view.init(this, data);
+	}
 
 }

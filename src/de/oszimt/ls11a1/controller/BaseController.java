@@ -3,6 +3,9 @@
  */
 package de.oszimt.ls11a1.controller;
 
+import de.oszimt.ls11a1.model.Model;
+import de.oszimt.ls11a1.view.IActualView;
+
 /**
  * @author Kay Patzwald (patzwald@oszimt.de)
  *
@@ -10,21 +13,39 @@ package de.oszimt.ls11a1.controller;
 public abstract class BaseController {
 
 	protected MainController controller;
+	protected IActualView view;
+	protected final String id;
+	protected String title;
 
-	public BaseController(MainController controller) {
+	public BaseController(String id, String title, MainController controller) {
 		super();
 		this.controller = controller;
+		this.id = id;
+		this.title = title;
 	}
 
-	protected abstract void initView();
+	protected void initView() {
+		view = controller.getMainView().getView(id);
+		view.init(this);
+	}
 
 	protected abstract void initController();
 	
 	protected abstract void initController(Object data);
-
-	protected abstract void initModel();
 	
 	public MainController getMainController() {
 		return controller;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public Model getModel(){
+		return getMainController().getModel();
 	}
 }
