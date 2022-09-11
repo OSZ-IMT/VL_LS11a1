@@ -1,9 +1,10 @@
 package de.oszimt.ls11a1.view;
 
-import de.oszimt.ls11a1.controller.BaseController;
 import de.oszimt.ls11a1.controller.MainController;
+import de.oszimt.ls11a1.view.customer.AddCustomerConsole;
+import de.oszimt.ls11a1.view.customer.ViewCustomerConsole;
+import de.oszimt.ls11a1.view.customer.ViewCustomersConsole;
 
-import javax.swing.*;
 import java.util.Hashtable;
 
 public class MainConsole implements IMainView{

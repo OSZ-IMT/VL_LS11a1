@@ -1,6 +1,7 @@
 package de.oszimt.ls11a1.view;
 
 import de.oszimt.ls11a1.controller.BaseController;
+import de.oszimt.ls11a1.helper.ConsoleHelper;
 
 public class MainViewConsole implements IActualView{
 

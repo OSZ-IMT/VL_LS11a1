@@ -1,11 +1,11 @@
 /*
  * Created on 01.05.2022 by Kay Patzwald
  */
-package de.oszimt.ls11a1.model;
+package de.oszimt.ls11a1.model.customer;
+
+import de.oszimt.ls11a1.view.IView;
 
 import java.util.ArrayList;
-
-import de.oszimt.ls11a1.view.View;
 
 /**
  * Customer class
@@ -13,7 +13,7 @@ import de.oszimt.ls11a1.view.View;
  * @author Kay Patzwald
  */
 public class Customer {
-	private final ArrayList<View> views;
+	private final ArrayList<IView> views;
 	private String lastname;
 	private String firstname;
 	private int customerID;
@@ -52,7 +52,7 @@ public class Customer {
 	/** Fügt einen Observer ein und benachrichtigt diesen
 	 * @param view
 	 */
-	public void addView(View view) {
+	public void addView(IView view) {
 		views.add(view);
 		view.refresh();
 	}
@@ -95,7 +95,7 @@ public class Customer {
 	 * 
 	 */
 	public void notifyViews() {
-		for (View view : views) {
+		for (IView view : views) {
 			view.refresh();
 		}
 	}
@@ -103,7 +103,7 @@ public class Customer {
 	/** Entfernt einen Observer
 	 * @param view
 	 */
-	public void removeView(View view) {
+	public void removeView(IView view) {
 		views.remove(view);
 	}
 

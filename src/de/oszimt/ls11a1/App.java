@@ -5,8 +5,6 @@ package de.oszimt.ls11a1;
 
 import de.oszimt.ls11a1.controller.MainController;
 import de.oszimt.ls11a1.model.Model;
-import de.oszimt.ls11a1.model.dao.DaoFactory;
-import de.oszimt.ls11a1.model.dao.IDao;
 import de.oszimt.ls11a1.view.MainConsole;
 
 /**

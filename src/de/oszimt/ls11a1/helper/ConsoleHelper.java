@@ -1,4 +1,4 @@
-package de.oszimt.ls11a1.view;
+package de.oszimt.ls11a1.helper;
 
 import de.oszimt.ls11a1.controller.BaseController;
 

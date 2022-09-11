@@ -1,10 +1,8 @@
-package de.oszimt.ls11a1.model;
-
-import de.oszimt.ls11a1.helper.Log;
+package de.oszimt.ls11a1.model.customer;
 
 public class CustomerMgmt {
 
-    private Customer[] customers;
+    private final Customer[] customers;
 
     public CustomerMgmt(){
         customers = new Customer[3];
@@ -13,12 +11,11 @@ public class CustomerMgmt {
         customers[2] = new Customer(2, "Ghurt", "Jo", "jo.ghurt@mailbox.org", "0049157653465");
     }
 
-    public void addCustomer(Customer c) {
-        //TODO not implemented
-        Log.error(new Throwable("Not implemented"),"Add customer is not implemented");
+    public void add(Customer c) {
+        customers[c.getCustomerID()] = c;
     }
 
-    public Customer getCustomer(int id) {
+    public Customer get(int id) {
         return customers[id];
     }
 

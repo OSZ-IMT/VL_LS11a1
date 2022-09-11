@@ -14,9 +14,9 @@ public class Log {
      * @param mess, Message
      */
     public static void debug(String mess) {
-        StackTraceElement pos = new Throwable().getStackTrace()[1];
-        System.out.printf("%s %s", pos, mess);
-        System.out.println();
+        // StackTraceElement pos = new Throwable().getStackTrace()[1];
+        // System.out.printf("%s %s", pos, mess);
+        // System.out.println();
     }
 
     /**

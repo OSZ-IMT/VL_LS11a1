@@ -3,9 +3,11 @@
  */
 package de.oszimt.ls11a1.controller;
 
+import de.oszimt.ls11a1.controller.customer.AddCustomerController;
+import de.oszimt.ls11a1.controller.customer.ViewCustomerController;
+import de.oszimt.ls11a1.controller.customer.ViewCustomersController;
 import de.oszimt.ls11a1.helper.Log;
 import de.oszimt.ls11a1.model.Model;
-import de.oszimt.ls11a1.model.dao.IDao;
 import de.oszimt.ls11a1.view.IMainView;
 
 import java.util.Hashtable;
@@ -48,8 +50,9 @@ public class MainController {
 		controllerTable.put(controller.getId(), controller);
 	}
 	
-	/** COMMENT missing
-	 * @param controllerName
+	/**
+	 * Neuen Controller festlegen
+	 * @param controllerName, ID
 	 */
 	public void setController(String controllerName) {
 		Log.debug("show controller "+controllerName);
@@ -57,8 +60,10 @@ public class MainController {
 		this.activeController.initController();
 	}
 	
-	/** COMMENT missing
-	 * @param controllerName
+	/**
+	 * Neuen Controller festlegen mit Übergabeparameter
+	 * @param controllerName, ID
+	 * @param data, Übergebene Daten. Müssen noch geparst werden
 	 */
 	public void setController(String controllerName, Object data) {
 		this.activeController = controllerTable.get(controllerName);

@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import de.oszimt.ls11a1.model.Customer;
+import de.oszimt.ls11a1.model.customer.Customer;
 import org.junit.jupiter.api.Test;
 
 /**

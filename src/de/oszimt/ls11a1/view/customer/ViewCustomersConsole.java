@@ -1,9 +1,11 @@
-package de.oszimt.ls11a1.view;
+package de.oszimt.ls11a1.view.customer;
 
 import de.oszimt.ls11a1.controller.BaseController;
-import de.oszimt.ls11a1.model.Customer;
+import de.oszimt.ls11a1.helper.ConsoleHelper;
+import de.oszimt.ls11a1.model.customer.Customer;
+import de.oszimt.ls11a1.view.IActualView;
 
-public class ViewCustomersConsole implements IActualView{
+public class ViewCustomersConsole implements IActualView {
 
     @Override
     public void init(BaseController controller) {
@@ -11,7 +13,7 @@ public class ViewCustomersConsole implements IActualView{
         int size = controller.getModel().getCustomers().size();
 
         for(int i=0; i<size; i++) {
-            Customer c = controller.getModel().getCustomers().getCustomer(i);
+            Customer c = controller.getModel().getCustomers().get(i);
             System.out.printf("[%2s] %s, %s\n",c.getCustomerID(), c.getLastname(), c.getFirstname());
         }
 

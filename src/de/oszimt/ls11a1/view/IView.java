@@ -7,6 +7,6 @@ package de.oszimt.ls11a1.view;
  * @author Kay Patzwald (patzwald@oszimt.de)
  *
  */
-public interface View {
+public interface IView {
 	void refresh();
 }
