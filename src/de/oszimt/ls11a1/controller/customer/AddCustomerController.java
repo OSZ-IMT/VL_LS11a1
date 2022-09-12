@@ -26,7 +26,7 @@ public class AddCustomerController extends BaseController {
 	protected void initController(Object data) {}
 
 	public Customer addCustomer(String lastName, String firstName, String email, String tel){
-		Customer c = new Customer(getModel().getCustomers().size(), lastName, firstName, email, tel);
+		Customer c = new Customer(getModel().getCustomers().getNextFreeID(), lastName, firstName, email, tel);
 		getModel().getCustomers().add(c);
 		return c;
 	}

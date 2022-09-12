@@ -2,6 +2,7 @@ package de.oszimt.ls11a1.view;
 
 import de.oszimt.ls11a1.controller.MainController;
 import de.oszimt.ls11a1.view.customer.AddCustomerConsole;
+import de.oszimt.ls11a1.view.customer.RemoveCustomerConsole;
 import de.oszimt.ls11a1.view.customer.ViewCustomerConsole;
 import de.oszimt.ls11a1.view.customer.ViewCustomersConsole;
 
@@ -24,6 +25,7 @@ public class MainConsole implements IMainView{
         viewTable.put("viewCustomers", new ViewCustomersConsole());
         viewTable.put("viewCustomer", new ViewCustomerConsole());
         viewTable.put("addCustomer", new AddCustomerConsole());
+        viewTable.put("removeCustomer", new RemoveCustomerConsole());
 
         System.out.println("Willkommen bei der Handwerker Service Eulenstein GmbH");
     }

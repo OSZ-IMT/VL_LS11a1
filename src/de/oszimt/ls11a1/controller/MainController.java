@@ -4,6 +4,7 @@
 package de.oszimt.ls11a1.controller;
 
 import de.oszimt.ls11a1.controller.customer.AddCustomerController;
+import de.oszimt.ls11a1.controller.customer.RemoveCustomerController;
 import de.oszimt.ls11a1.controller.customer.ViewCustomerController;
 import de.oszimt.ls11a1.controller.customer.ViewCustomersController;
 import de.oszimt.ls11a1.helper.Log;
@@ -43,6 +44,7 @@ public class MainController {
 		addController(new ViewCustomersController(this));
 		addController(new ViewCustomerController(this));
 		addController(new AddCustomerController(this));
+		addController(new RemoveCustomerController(this));
 		setController("viewMain");
 	}
 

@@ -12,11 +12,19 @@ public class CustomerMgmt {
         customers[c.getCustomerID()] = c;
     }
 
+    public void remove(Customer c) {
+        customers[c.getCustomerID()] = null;
+    }
+
     public Customer get(int id) {
         return customers[id];
     }
 
     public int size() {
+        return customers.length;
+    }
+
+    public int getNextFreeID(){
         return customers.length;
     }
 }

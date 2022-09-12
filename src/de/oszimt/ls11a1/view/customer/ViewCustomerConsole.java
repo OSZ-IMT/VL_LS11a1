@@ -17,10 +17,13 @@ public class ViewCustomerConsole implements IActualView {
 
         System.out.println(c);
 
-        ConsoleHelper.printController(controller, "viewMain", 0);
+        //generate the menu
+        String[] menuAry = {"viewCustomers","viewMain"};
+        for (int i = 0; i< menuAry.length;i++) {
+            ConsoleHelper.printController(controller, menuAry[i], i);
+        }
 
-        int x = ConsoleHelper.inputInt("Was wollen Sie tun?",0,0);
-
-        controller.getMainController().setController("viewMain");
+        int x = ConsoleHelper.inputInt("Was wollen Sie tun?",0,menuAry.length-1);
+        controller.getMainController().setController(menuAry[x]);
     }
 }

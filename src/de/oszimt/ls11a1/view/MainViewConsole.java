@@ -8,7 +8,7 @@ public class MainViewConsole implements IActualView{
     @Override
     public void init(BaseController controller) {
 
-        String[] menuAry = {"viewCustomers","addCustomer","exit"};
+        String[] menuAry = {"viewCustomers","addCustomer","removeCustomer","exit"};
 
         for (int i = 0; i< menuAry.length;i++) {
             ConsoleHelper.printController(controller, menuAry[i], i);
