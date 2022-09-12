@@ -24,7 +24,7 @@ public class ViewCustomersConsole implements IActualView {
         if (x == size){
             controller.getMainController().setController("viewMain");
         } else {
-            controller.getMainController().setController("viewCustomer",x);
+            controller.getMainController().setController("viewCustomer", x);
         }
     }
 
