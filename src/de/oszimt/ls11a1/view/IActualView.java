@@ -7,12 +7,6 @@ public interface IActualView {
     /**
      * Launch the application  and apply the controller     *
      * @param controller, actual controller
-     */
-    public void init(BaseController controller);
-
-    /**
-     * Launch the application  and apply the controller     *
-     * @param controller, actual controller
      * @param data, special data
      */
     public void init(BaseController controller, Object... data);

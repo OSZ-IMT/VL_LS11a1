@@ -9,7 +9,7 @@ import de.oszimt.ls11a1.view.IActualView;
 public class RemoveCustomerConsole implements IActualView {
 
     @Override
-    public void init(BaseController controller) {
+    public void init(BaseController controller, Object... data) {
 
         int size = controller.getModel().getCustomers().size();
 
@@ -28,9 +28,5 @@ public class RemoveCustomerConsole implements IActualView {
         }
 
         controller.getMainController().setController("viewMain");
-    }
-
-    @Override
-    public void init(BaseController controller, Object... data) {
     }
 }

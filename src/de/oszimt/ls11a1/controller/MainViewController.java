@@ -8,20 +8,12 @@ package de.oszimt.ls11a1.controller;
  *
  */
 public class MainViewController extends BaseController {
-	
-	/**
-	 * @param controller
-	 */
+
 	public MainViewController(MainController controller) {
 		super("viewMain","Hauptmenü",controller);
 	}
 
 	@Override
-	protected void initController() {
-		initView();
-	}
-
-	@Override
-	protected void initController(Object... data) {}
+	protected void initController(Object... data) { initView(data); }
 
 }

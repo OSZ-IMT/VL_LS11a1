@@ -8,7 +8,7 @@ import de.oszimt.ls11a1.view.IActualView;
 public class ViewCustomersConsole implements IActualView {
 
     @Override
-    public void init(BaseController controller) {
+    public void init(BaseController controller, Object... data) {
 
         int size = controller.getModel().getCustomers().size();
 
@@ -26,9 +26,5 @@ public class ViewCustomersConsole implements IActualView {
         } else {
             controller.getMainController().setController("viewCustomer", x);
         }
-    }
-
-    @Override
-    public void init(BaseController controller, Object... data) {
     }
 }

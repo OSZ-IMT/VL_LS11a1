@@ -6,7 +6,7 @@ import de.oszimt.ls11a1.helper.ConsoleHelper;
 public class MainViewConsole implements IActualView{
 
     @Override
-    public void init(BaseController controller) {
+    public void init(BaseController controller, Object... data) {
 
         String[] menuAry = {"viewCustomers","addCustomer","removeCustomer","exit"};
 
@@ -17,9 +17,5 @@ public class MainViewConsole implements IActualView{
         int x = ConsoleHelper.inputInt("Was wollen Sie tun?",0,menuAry.length-1);
 
         controller.getMainController().setController(menuAry[x]);
-    }
-
-    @Override
-    public void init(BaseController controller, Object... data) {
     }
 }

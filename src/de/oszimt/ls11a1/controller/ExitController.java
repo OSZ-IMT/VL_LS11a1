@@ -14,12 +14,8 @@ public class ExitController extends BaseController {
 	}
 
 	@Override
-	protected void initController() {
-		System.exit(0);
-	}
-
-	@Override
 	protected void initController(Object... data) {
+		System.exit(0);
 	}
 
 }

@@ -8,10 +8,6 @@ import de.oszimt.ls11a1.view.IActualView;
 public class ViewCustomerConsole implements IActualView {
 
     @Override
-    public void init(BaseController controller) {
-    }
-
-    @Override
     public void init(BaseController controller, Object... data) {
         Customer c = controller.getModel().getCustomers().get((int) data[0]);
 
