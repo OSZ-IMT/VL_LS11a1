@@ -22,7 +22,7 @@ public class RemoveCustomerController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object data) {}
+	protected void initController(Object... data) {}
 
 	public void removeCustomer(int id){
 		getModel().getCustomers().remove(getModel().getCustomers().get(id));

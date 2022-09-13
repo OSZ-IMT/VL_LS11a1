@@ -12,8 +12,8 @@ public class ViewCustomerConsole implements IActualView {
     }
 
     @Override
-    public void init(BaseController controller, Object data) {
-        Customer c = controller.getModel().getCustomers().get((int) data);
+    public void init(BaseController controller, Object... data) {
+        Customer c = controller.getModel().getCustomers().get((int) data[0]);
 
         System.out.println(c);
 

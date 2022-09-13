@@ -29,6 +29,6 @@ public class ViewCustomersConsole implements IActualView {
     }
 
     @Override
-    public void init(BaseController controller, Object data) {
+    public void init(BaseController controller, Object... data) {
     }
 }

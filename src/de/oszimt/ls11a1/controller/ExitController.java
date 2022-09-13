@@ -19,7 +19,7 @@ public class ExitController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object data) {
+	protected void initController(Object... data) {
 	}
 
 }

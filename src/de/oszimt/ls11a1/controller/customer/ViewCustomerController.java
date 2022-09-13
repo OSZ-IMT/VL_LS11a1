@@ -21,7 +21,7 @@ public class ViewCustomerController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object data) {
+	protected void initController(Object... data) {
 		initView();
 		view.init(this, data);
 	}

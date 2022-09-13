@@ -31,7 +31,7 @@ public abstract class BaseController {
 
 	protected abstract void initController();
 	
-	protected abstract void initController(Object data);
+	protected abstract void initController(Object... data);
 	
 	public MainController getMainController() {
 		return controller;

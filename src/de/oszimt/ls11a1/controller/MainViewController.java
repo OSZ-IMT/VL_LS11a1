@@ -22,6 +22,6 @@ public class MainViewController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object data) {}
+	protected void initController(Object... data) {}
 
 }

@@ -23,7 +23,7 @@ public class AddCustomerController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object data) {}
+	protected void initController(Object... data) {}
 
 	public Customer addCustomer(String lastName, String firstName, String email, String tel){
 		Customer c = new Customer(getModel().getCustomers().getNextFreeID(), lastName, firstName, email, tel);

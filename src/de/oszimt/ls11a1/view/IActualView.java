@@ -1,7 +1,6 @@
 package de.oszimt.ls11a1.view;
 
 import de.oszimt.ls11a1.controller.BaseController;
-import de.oszimt.ls11a1.controller.MainController;
 
 public interface IActualView {
 
@@ -16,5 +15,5 @@ public interface IActualView {
      * @param controller, actual controller
      * @param data, special data
      */
-    public void init(BaseController controller, Object data);
+    public void init(BaseController controller, Object... data);
 }
