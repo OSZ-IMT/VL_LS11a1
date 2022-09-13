@@ -1,7 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
-
 import de.oszimt.ls11a1.model.customer.Customer;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Customer test class
@@ -15,7 +15,7 @@ class TestModelCustomer {
 	void testConstructor() {
 		Customer c = new Customer(1, "last", "first");
 
-		assertEquals(1,c.getCustomerID());
+		assertEquals(1,c.getId());
 		assertEquals("last",c.getLastname());
 		assertEquals("first",c.getFirstname());
 	}

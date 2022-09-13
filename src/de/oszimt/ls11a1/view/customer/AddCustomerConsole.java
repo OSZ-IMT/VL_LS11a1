@@ -16,7 +16,7 @@ public class AddCustomerConsole implements IActualView {
         String tel = ConsoleHelper.input("Telefon");
 
         Customer c = ((AddCustomerController)controller).addCustomer(lastName, firstName, email, tel);
-        System.out.printf("Kunde %s erstellt.\n",c.getCustomerID());
+        System.out.printf("Kunde %s erstellt.\n",c.getId());
 
         controller.getMainController().setController("viewCustomers");
 

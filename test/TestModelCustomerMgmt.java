@@ -18,6 +18,10 @@ class TestModelCustomerMgmt {
 	@BeforeEach
 	void init(){
 		customers = new CustomerMgmt();
+
+		//testdata
+		Customer c = new Customer(0, "lastName", "firstName");
+		customers.add(c);
 	}
 
 	@Test

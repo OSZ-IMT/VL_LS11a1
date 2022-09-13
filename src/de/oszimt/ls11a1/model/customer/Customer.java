@@ -16,19 +16,19 @@ public class Customer {
 	private final ArrayList<IView> views;
 	private String lastname;
 	private String firstname;
-	private int customerID;
+	private int id;
 	private String tel;
 	private String email;
 
 	/**
 	 * Constructor of Customer
 	 * 
-	 * @param customerID The ID of the customer
+	 * @param id The ID of the customer
 	 * @param lastname   The lastname of the customer
 	 * @param firstname  The firstname of the customer
 	 */
-	public Customer(int customerID, String lastname, String firstname) {
-		this.customerID = customerID;
+	public Customer(int id, String lastname, String firstname) {
+		this.id = id;
 		this.lastname = lastname;
 		this.firstname = firstname;
 		views = new ArrayList<>();
@@ -37,14 +37,14 @@ public class Customer {
 	/**
 	 * Constructor of Customer
 	 *
-	 * @param customerID The ID of the customer
+	 * @param id The ID of the customer
 	 * @param lastname   The lastname of the customer
 	 * @param firstname  The firstname of the customer
 	 * @param email      The email of the customer
 	 * @param tel        The tel of the customer
 	 */
-	public Customer(int customerID, String lastname, String firstname, String email, String tel) {
-		this(customerID, lastname, firstname);
+	public Customer(int id, String lastname, String firstname, String email, String tel) {
+		this(id, lastname, firstname);
 		this.email = email;
 		this.tel = tel;
 	}
@@ -62,8 +62,8 @@ public class Customer {
 	 * 
 	 * @return Returns the customerID.
 	 */
-	public int getCustomerID() {
-		return customerID;
+	public int getId() {
+		return id;
 	}
 
 	/**
@@ -110,10 +110,10 @@ public class Customer {
 	/**
 	 * Setter for customerID.
 	 * 
-	 * @param customerID The customerID to set.
+	 * @param id The customerID to set.
 	 */
-	public void setCustomerID(int customerID) {
-		this.customerID = customerID;
+	public void setId(int id) {
+		this.id = id;
 		notifyViews();
 	}
 
@@ -157,7 +157,7 @@ public class Customer {
 		return "Customer{" +
 				"lastname='" + lastname + '\'' +
 				", firstname='" + firstname + '\'' +
-				", customerID=" + customerID +
+				", customerID=" + id +
 				", tel='" + tel + '\'' +
 				", email='" + email + '\'' +
 				'}';
