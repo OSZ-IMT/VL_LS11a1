@@ -9,11 +9,11 @@ public class CustomerMgmt {
     }
 
     public void add(Customer c) {
-        customers[c.getCustomerID()] = c;
+        customers[c.getId()] = c;
     }
 
     public void remove(Customer c) {
-        customers[c.getCustomerID()] = null;
+        customers[c.getId()] = null;
     }
 
     public Customer get(int id) {
