@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Customer test class
+ * Model test class
  *
  * @author Steffen Trutz
+ * @version 1
  */
 class TestModel {
 

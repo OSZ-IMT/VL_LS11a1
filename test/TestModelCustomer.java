@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Customer test class
  *
  * @author Steffen Trutz
+ * @version 1
  */
 class TestModelCustomer {
 

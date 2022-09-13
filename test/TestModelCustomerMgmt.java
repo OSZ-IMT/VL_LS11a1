@@ -6,9 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Customer test class
+ * Customer mgmt test class
  *
  * @author Steffen Trutz
+ * @version 1
  */
 class TestModelCustomerMgmt {
 
@@ -21,18 +22,27 @@ class TestModelCustomerMgmt {
 
 	@Test
 	void testAddSize() {
-		Customer c = new Customer(3, "last", "first");
+		int size = customers.size();
+		Customer c = new Customer(customers.getNextFreeID(), "last", "first");
 		customers.add(c);
 
-		assertEquals(4,customers.size());
+		assertEquals(size+1,customers.size());
 	}
 
 	@Test
 	void testAddContent() {
-		Customer c = new Customer(3, "last", "first");
+		Customer c = new Customer(customers.getNextFreeID(), "last", "first");
 		customers.add(c);
 
 		assertEquals("last",customers.get(customers.size()-1).getLastname());
+	}
+
+	@Test
+	void testDelete() {
+		int size = customers.size();
+		customers.remove(customers.get(0));
+
+		assertEquals(size-1,customers.size());
 	}
 
 }
