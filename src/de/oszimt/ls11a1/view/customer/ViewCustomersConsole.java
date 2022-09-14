@@ -14,7 +14,7 @@ public class ViewCustomersConsole implements IActualView {
 
         for(int i=0; i<size; i++) {
             Customer c = controller.getModel().getCustomers().get(i);
-            System.out.printf("[%2s] %s\n",c.getId(), c);
+            System.out.printf("[%2s] %s\n",i, c);
         }
 
         ConsoleHelper.printController(controller, "viewMain", size);
