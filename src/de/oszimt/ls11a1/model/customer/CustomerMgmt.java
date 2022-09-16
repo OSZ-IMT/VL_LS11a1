@@ -1,6 +1,9 @@
 package de.oszimt.ls11a1.model.customer;
 
-public class CustomerMgmt {
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class CustomerMgmt implements Iterable<Customer>{
 
     private final Customer[] customers;
 
@@ -26,5 +29,10 @@ public class CustomerMgmt {
 
     public int getNextFreeID(){
         return customers.length;
+    }
+
+    public Iterator<Customer> iterator() {
+        // bei der ArrayList einfach customers.iterator(); verwenden
+        return Arrays.stream(customers).iterator();
     }
 }
