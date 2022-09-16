@@ -24,14 +24,12 @@ public abstract class BaseController {
 		this.title = title;
 	}
 
-	protected void initView() {
+	protected void initView(Object... data) {
 		view = controller.getMainView().getView(id);
-		view.init(this);
+		view.init(this, data);
 	}
-
-	protected abstract void initController();
 	
-	protected abstract void initController(Object data);
+	protected abstract void initController(Object... data);
 	
 	public MainController getMainController() {
 		return controller;

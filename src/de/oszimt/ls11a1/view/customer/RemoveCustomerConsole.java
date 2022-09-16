@@ -9,28 +9,26 @@ import de.oszimt.ls11a1.view.IActualView;
 public class RemoveCustomerConsole implements IActualView {
 
     @Override
-    public void init(BaseController controller) {
+    public void init(BaseController controller, Object... data) {
 
         int size = controller.getModel().getCustomers().size();
 
         for(int i=0; i<size; i++) {
             Customer c = controller.getModel().getCustomers().get(i);
-            System.out.printf("[%2s] %s\n",c.getId(), c);
+            System.out.printf("[%2s] %s\n", i, c);
         }
 
         ConsoleHelper.printController(controller, "viewMain", size);
 
         int x = ConsoleHelper.inputInt("Wählen Sie den zu löschenden Kunden",0,size);
 
+        //nur löschen, wenn nicht der letzte Menüpunkt gewählt wurde.
         if (x != size){
-            ((RemoveCustomerController)controller).removeCustomer(x);
+            RemoveCustomerController rcc = (RemoveCustomerController)controller;
+            rcc.removeCustomer(x);
             System.out.printf("Kunde %s gelöscht.\n",x);
         }
 
         controller.getMainController().setController("viewMain");
-    }
-
-    @Override
-    public void init(BaseController controller, Object data) {
     }
 }

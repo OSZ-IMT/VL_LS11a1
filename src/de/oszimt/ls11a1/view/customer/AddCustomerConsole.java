@@ -9,20 +9,17 @@ import de.oszimt.ls11a1.view.IActualView;
 public class AddCustomerConsole implements IActualView {
 
     @Override
-    public void init(BaseController controller) {
+    public void init(BaseController controller, Object... data) {
         String firstName = ConsoleHelper.input("Vorname");
         String lastName = ConsoleHelper.input("Nachname");
         String email = ConsoleHelper.input("E-Mail");
         String tel = ConsoleHelper.input("Telefon");
 
-        Customer c = ((AddCustomerController)controller).addCustomer(lastName, firstName, email, tel);
+        AddCustomerController acc = ((AddCustomerController)controller);
+        Customer c = acc.addCustomer(lastName, firstName, email, tel);
         System.out.printf("Kunde %s erstellt.\n",c.getId());
 
         controller.getMainController().setController("viewCustomers");
 
-    }
-
-    @Override
-    public void init(BaseController controller, Object data) {
     }
 }

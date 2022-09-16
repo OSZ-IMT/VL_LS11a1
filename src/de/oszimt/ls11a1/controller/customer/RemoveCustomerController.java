@@ -17,12 +17,7 @@ public class RemoveCustomerController extends BaseController {
 	}
 
 	@Override
-	protected void initController() {
-		initView();
-	}
-
-	@Override
-	protected void initController(Object data) {}
+	protected void initController(Object... data) { initView(data); }
 
 	public void removeCustomer(int id){
 		getModel().getCustomers().remove(getModel().getCustomers().get(id));
