@@ -11,13 +11,14 @@ public class RemoveCustomerConsole implements IActualView {
     @Override
     public void init(BaseController controller, Object... data) {
 
-        int size = controller.getModel().getCustomers().size();
-
-        for(int i=0; i<size; i++) {
-            Customer c = controller.getModel().getCustomers().get(i);
-            System.out.printf("[%2s] %s\n", i, c);
+        //alle Kunden ausgeben
+        int count = 0;
+        for (Customer c : controller.getModel().getCustomers()){
+            System.out.printf("[%2s] %s\n", count, c);
+            count++;
         }
 
+        int size = controller.getModel().getCustomers().size();
         ConsoleHelper.printController(controller, "viewMain", size);
 
         int x = ConsoleHelper.inputInt("Wählen Sie den zu löschenden Kunden",0,size);

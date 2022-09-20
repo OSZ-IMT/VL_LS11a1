@@ -8,6 +8,7 @@ public class MainViewConsole implements IActualView{
     @Override
     public void init(BaseController controller, Object... data) {
 
+        //generate the menu
         String[] menuAry = {"viewCustomers","addCustomer","removeCustomer","exit"};
 
         for (int i = 0; i< menuAry.length;i++) {

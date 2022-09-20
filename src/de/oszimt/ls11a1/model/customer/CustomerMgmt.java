@@ -19,6 +19,11 @@ public class CustomerMgmt implements Iterable<Customer>{
         customers[c.getId()] = null;
     }
 
+    /**
+     * Gibt den Kunden anhand seiner ID (getID) zurück.
+     * @param id, CustomerID
+     * @return Customer
+     */
     public Customer get(int id) {
         return customers[id];
     }
@@ -27,10 +32,19 @@ public class CustomerMgmt implements Iterable<Customer>{
         return customers.length;
     }
 
+    /**
+     * 1Stern: Gibt die nächste freie ID für einen neuen Kunden zurück, keine ID darf doppelt vorkommen
+     * 3Stern: Berücksichtigung von Löschungen. Es sollen zusätzlich zur 1Stern Aufgabe keine ID Lücken entstehen.
+     * @return ID
+     */
     public int getNextFreeID(){
         return customers.length;
     }
 
+    /**
+     * Notwendig für Schleifenaufrufe for und foreach
+     * @return
+     */
     public Iterator<Customer> iterator() {
         // bei der ArrayList einfach customers.iterator(); verwenden
         return Arrays.stream(customers).iterator();
