@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Customer mgmt test class
  *
  * @author Steffen Trutz
- * @version 1
+ * @version 1.1
  */
 class TestModelCustomerMgmt {
 
@@ -47,6 +47,22 @@ class TestModelCustomerMgmt {
 		customers.remove(customers.get(0));
 
 		assertEquals(size-1,customers.size());
+	}
+
+	@Test
+	void testFreeNextID() {
+		assertEquals(1,customers.getNextFreeID());
+	}
+
+	/**
+	 * Dieser Test funktioniert nur, wenn die 3 Sterne Aufgabe erledigt wurde.
+	 */
+	@Test
+	void testFreeNextIDSterne3() {
+		Customer c = new Customer(2, "last", "first");
+		customers.add(c);
+
+		assertEquals(1,customers.getNextFreeID());
 	}
 
 }
