@@ -43,7 +43,7 @@ public class CustomerMgmt implements Iterable<Customer>{
 
     /**
      * Notwendig für Schleifenaufrufe for und foreach
-     * @return
+     * @return Iterator
      */
     public Iterator<Customer> iterator() {
         // bei der ArrayList einfach customers.iterator(); verwenden
