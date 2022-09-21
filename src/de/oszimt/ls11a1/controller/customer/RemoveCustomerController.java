@@ -5,6 +5,7 @@ package de.oszimt.ls11a1.controller.customer;
 
 import de.oszimt.ls11a1.controller.BaseController;
 import de.oszimt.ls11a1.controller.MainController;
+import de.oszimt.ls11a1.model.customer.Customer;
 
 /**
  * @author Kay Patzwald (patzwald@oszimt.de)
@@ -17,10 +18,10 @@ public class RemoveCustomerController extends BaseController {
 	}
 
 	@Override
-	protected void initController(Object... data) { initView(data); }
+	protected void initController(Object... data) { initView(data);}
 
-	public void removeCustomer(int id){
-		getModel().getCustomers().remove(getModel().getCustomers().get(id));
+	public void removeCustomer(Customer c){
+		getModel().getCustomers().remove(c);
 	}
 
 }

@@ -65,4 +65,21 @@ class TestModelCustomerMgmt {
 		assertEquals(1,customers.getNextFreeID());
 	}
 
+	@Test
+	void testGet() {
+		assertEquals("lastName",customers.get(0).getLastname());
+	}
+
+	/**
+	 * Dieser Test funktioniert nur, wenn die 2 Sterne Aufgabe erledigt wurde.
+	 */
+	@Test
+	void testGetSterne2() {
+		Customer c = new Customer(2, "last", "first");
+		customers.add(c);
+
+		assertEquals(2,customers.size());
+		assertEquals("last",customers.get(2).getLastname());
+	}
+
 }

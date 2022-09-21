@@ -20,7 +20,8 @@ public class CustomerMgmt implements Iterable<Customer>{
     }
 
     /**
-     * Gibt den Kunden anhand seiner ID (getID) zurück.
+     * 1Stern: Gibt den Kunden anhand seiner Position im Array zurück
+     * 2Stern: Gibt den Kunden anhand seiner ID (getID) zurück.
      * @param id, CustomerID
      * @return Customer
      */
