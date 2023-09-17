@@ -54,6 +54,14 @@ public class CustomerMgmt implements IntCustomerMgmt{
         return 0;
     }
 
+    /**
+     * Return the numbers of customers
+     * @return size
+     */
+    public int size(){
+        return 0;
+    }
+
     public void loadData() {
 
     }

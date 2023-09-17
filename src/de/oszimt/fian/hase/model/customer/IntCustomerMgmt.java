@@ -56,4 +56,10 @@ public interface IntCustomerMgmt {
 	 */
 	int getNextFreeId();
 
+	/**
+	 * Return the numbers of customer
+	 * @return size
+	 */
+	int size();
+
 }

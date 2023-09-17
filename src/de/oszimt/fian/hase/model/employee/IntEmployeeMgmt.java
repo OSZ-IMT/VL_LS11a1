@@ -57,4 +57,10 @@ public interface IntEmployeeMgmt {
 	 */
 	int getNextFreeId();
 
+	/**
+	 * Return the numbers of employees
+	 * @return size
+	 */
+	int size();
+
 }

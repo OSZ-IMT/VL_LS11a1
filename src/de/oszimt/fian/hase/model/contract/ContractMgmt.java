@@ -61,6 +61,14 @@ public class ContractMgmt implements IntContractMgmt {
         return 0;
     }
 
+    /**
+     * Return the numbers of contract
+     * @return size
+     */
+    public int size(){
+        return 0;
+    }
+
     public void loadData() {
 
     }

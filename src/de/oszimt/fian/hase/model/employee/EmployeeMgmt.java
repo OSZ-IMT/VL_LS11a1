@@ -62,6 +62,14 @@ public class EmployeeMgmt implements IntEmployeeMgmt {
 		return employeeList.length;
 	}
 
+	/**
+	 * Return the numbers of employees
+	 * @return size
+	 */
+	public int size(){
+		return employeeList.length;
+	}
+
 	// 
 	//  methods for installing test data
 	//

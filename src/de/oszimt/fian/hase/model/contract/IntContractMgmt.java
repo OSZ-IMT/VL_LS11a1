@@ -59,4 +59,10 @@ public interface IntContractMgmt {
 	 */
 	int getNextFreeId();
 
+	/**
+	 * Return the numbers of contract
+	 * @return size
+	 */
+	int size();
+
 }
