@@ -1,8 +1,8 @@
-package de.oszimt.aj3.contractMgmt.view;
+package de.oszimt.fian.hase.view;
 
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
-public interface IView {
+public interface IntView {
 
     /**
      * Display this view

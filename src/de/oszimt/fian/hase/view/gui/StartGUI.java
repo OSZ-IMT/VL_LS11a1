@@ -1,11 +1,11 @@
-package de.oszimt.aj3.contractMgmt.view.gui;
+package de.oszimt.fian.hase.view.gui;
 
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
-import de.oszimt.aj3.contractMgmt.view.IView;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
+import de.oszimt.fian.hase.view.IntView;
 
 import javax.swing.*;
 
-public class StartGUI implements IView {
+public class StartGUI implements IntView {
 
     @Override
     public void show(HaseGmbHManagement model) {

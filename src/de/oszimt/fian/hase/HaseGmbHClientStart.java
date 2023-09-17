@@ -1,12 +1,12 @@
-package de.oszimt.aj3.contractMgmt;
+package de.oszimt.fian.hase;
 
-import de.oszimt.aj3.contractMgmt.view.IView;
-import de.oszimt.aj3.contractMgmt.view.console.StartConsole;
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
-import de.oszimt.aj3.contractMgmt.view.gui.StartGUI;
+import de.oszimt.fian.hase.view.IntView;
+import de.oszimt.fian.hase.view.console.StartConsole;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
+import de.oszimt.fian.hase.view.gui.StartGUI;
 
 public class HaseGmbHClientStart {
-	enum View {GUI, CONSOLE};
+	enum View {GUI, CONSOLE}
 
 	public static void main(String[] args) {
 		new HaseGmbHClientStart();
@@ -14,7 +14,7 @@ public class HaseGmbHClientStart {
 
 
 	public HaseGmbHClientStart() {
-		IView view = getView(View.CONSOLE); //getView(View.GUI); //
+		IntView view = getView(View.CONSOLE); //getView(View.GUI); //
 
 		// connect and start
 		HaseGmbHManagement model = new HaseGmbHManagement(view);
@@ -26,10 +26,10 @@ public class HaseGmbHClientStart {
 
 	/**
 	 * Get the requested view
-	 * @param type
+	 * @param type, type of the view
 	 * @return the requested view
 	 */
-	private IView getView(View type){
+	private IntView getView(View type){
 		return switch (type) {
 			case CONSOLE -> new StartConsole();
 			case GUI -> new StartGUI();

@@ -1,4 +1,4 @@
-package de.oszimt.aj3.contractMgmt.model;
+package de.oszimt.fian.hase.model;
 
 public class Address {
 	private String street;

@@ -1,6 +1,6 @@
-package de.oszimt.aj3.contractMgmt.model.contract;
-import de.oszimt.aj3.contractMgmt.model.ActivityRecord;
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
+package de.oszimt.fian.hase.model.contract;
+import de.oszimt.fian.hase.model.ActivityRecord;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,13 @@ public interface IntContractMgmt {
 	
 	/**
 	 * add a new contract 
-	 * @param contract
+	 * @param contract, to add
 	 */
 	boolean add(Contract contract);
   
 	/**
 	 * Returns the contract whose ID was passed as a parameter
-	 * @param id
+	 * @param id of the element
 	 * @return a contract object
 	 */
 	Contract get(int id);
@@ -28,7 +28,7 @@ public interface IntContractMgmt {
 	/**
 	 * Replaces an existing contract with the contract 
 	 * which was transferred as a parameter
-	 * @param contract
+	 * @param contract to update
 	 * @return true if it was successful, else false
 	 */
 	boolean update(Contract contract);
@@ -37,7 +37,7 @@ public interface IntContractMgmt {
 	
 	/**
 	 * Removes an existing contract
-	 * @param id
+	 * @param id of the element
 	 * @return true if it was successful, false otherwise
 	 */
 	boolean delete(int id);
@@ -52,5 +52,11 @@ public interface IntContractMgmt {
 	 * Load the data
 	 */
 	void loadData();
+
+	/**
+	 * Return the next free id
+	 * @return next id
+	 */
+	int getNextFreeId();
 
 }

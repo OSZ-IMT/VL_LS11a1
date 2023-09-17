@@ -1,5 +1,5 @@
-package de.oszimt.aj3.contractMgmt.model.employee;
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
+package de.oszimt.fian.hase.model.employee;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public interface IntEmployeeMgmt {
   
 	/**
 	 * Returns the employee whose ID was passed as a parameter
-	 * @param id
+	 * @param id, id of the employee
 	 * @return an object of class Employee
 	 */
 	Employee get(int id);
@@ -50,5 +50,11 @@ public interface IntEmployeeMgmt {
 	 * Load the data
 	 */
 	void loadData();
+
+	/**
+	 * Return the next free id
+	 * @return next id
+	 */
+	int getNextFreeId();
 
 }

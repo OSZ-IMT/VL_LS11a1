@@ -1,6 +1,6 @@
-package de.oszimt.aj3.contractMgmt.model;
+package de.oszimt.fian.hase.model;
 
-import de.oszimt.aj3.contractMgmt.model.employee.Employee;
+import de.oszimt.fian.hase.model.employee.Employee;
 
 import java.time.*;
 

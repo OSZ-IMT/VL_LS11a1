@@ -1,5 +1,5 @@
-package de.oszimt.aj3.contractMgmt.model.customer;
-import de.oszimt.aj3.contractMgmt.model.HaseGmbHManagement;
+package de.oszimt.fian.hase.model.customer;
+import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
 
@@ -49,5 +49,11 @@ public interface IntCustomerMgmt {
 	 * Load the data
 	 */
 	void loadData();
+
+	/**
+	 * Return the next free id
+	 * @return next id
+	 */
+	int getNextFreeId();
 
 }
