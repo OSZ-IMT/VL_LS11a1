@@ -3,6 +3,7 @@ import de.oszimt.fian.hase.model.ActivityRecord;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public interface IntContractMgmt {
 	
@@ -23,7 +24,7 @@ public interface IntContractMgmt {
 	 * Returns a list with all contracts
 	 * @return {@link ArrayList}
 	 */
-	ArrayList<Contract> getAll();
+	Collection<Contract> getAll();
 	
 	/**
 	 * Replaces an existing contract with the contract 

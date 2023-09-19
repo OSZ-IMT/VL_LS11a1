@@ -2,6 +2,7 @@ package de.oszimt.fian.hase.model.employee;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public interface IntEmployeeMgmt {
 		
@@ -23,7 +24,7 @@ public interface IntEmployeeMgmt {
 	 * Returns a list with all employees
 	 * @return {@link ArrayList}
 	 */
-	ArrayList<Employee> getAll();
+	Collection<Employee> getAll();
 	
 	/**
 	 * Replaces an existing employee with the employee 

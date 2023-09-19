@@ -7,6 +7,7 @@ import de.oszimt.fian.hase.model.HaseGmbHManagement;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class ContractMgmt implements IntContractMgmt {
     private final HaseGmbHManagement model;
@@ -31,8 +32,8 @@ public class ContractMgmt implements IntContractMgmt {
     }
 
     @Override
-    public ArrayList<Contract> getAll() {
-        System.err.println("Wird erst in A3.1 implementiert");
+    public Collection<Contract> getAll() {
+        model.getView().showError("Wird erst in A3.1 implementiert");
         return new ArrayList<>();
     }
 

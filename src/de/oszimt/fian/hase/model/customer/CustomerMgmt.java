@@ -3,6 +3,7 @@ package de.oszimt.fian.hase.model.customer;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class CustomerMgmt implements IntCustomerMgmt{
 
@@ -29,8 +30,8 @@ public class CustomerMgmt implements IntCustomerMgmt{
     }
 
     @Override
-    public ArrayList<Customer> getAll() {
-        System.err.println("Wird erst in A3.1 implementiert");
+    public Collection<Customer> getAll() {
+        model.getView().showError("Wird erst in A3.1 implementiert");
         return new ArrayList<>();
     }
 

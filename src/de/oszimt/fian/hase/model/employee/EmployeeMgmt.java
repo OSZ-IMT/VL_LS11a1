@@ -4,6 +4,7 @@ import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class EmployeeMgmt implements IntEmployeeMgmt {
 
@@ -36,7 +37,7 @@ public class EmployeeMgmt implements IntEmployeeMgmt {
 	}
 
 	@Override
-	public ArrayList<Employee> getAll() {
+	public Collection<Employee> getAll() {
 		return new ArrayList<>(Arrays.asList(employeeList));
 	}
 

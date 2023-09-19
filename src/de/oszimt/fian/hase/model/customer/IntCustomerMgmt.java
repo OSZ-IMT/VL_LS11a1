@@ -2,6 +2,7 @@ package de.oszimt.fian.hase.model.customer;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public interface IntCustomerMgmt {
 	
@@ -22,7 +23,7 @@ public interface IntCustomerMgmt {
 	 * Returns a list with all customers
 	 * @return {@link ArrayList}
 	 */
-	ArrayList<Customer> getAll();
+	Collection<Customer> getAll();
 	
 	/**
 	 * Replaces an existing customer with the customer 

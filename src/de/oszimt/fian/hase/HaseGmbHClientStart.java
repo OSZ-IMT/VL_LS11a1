@@ -30,10 +30,13 @@ public class HaseGmbHClientStart {
 	 * @return the requested view
 	 */
 	private IntView getView(View type){
-		return switch (type) {
-			case CONSOLE -> new StartConsole();
-			case GUI -> new StartGUI();
+		switch (type) {
+			case CONSOLE:
+				return new StartConsole();
+			case GUI:
+				return new StartGUI();
         };
+		return null;
 	}
 
 }

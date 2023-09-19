@@ -24,11 +24,12 @@ public class StartConsole implements IntView {
         ConsoleHelper.printMenu(4,"Verträge anzeigen");
         int i = ConsoleHelper.inputInt("Ihre Wahl",0,4);
         switch (i) {
-            case 0 -> showEmployee();
-            case 1 -> addEmployee();
-            case 2 -> removeEmployee();
-            case 3 -> showCustomer();
-            case 4 -> showContract();
+            case 0: showEmployee(); break;
+            case 1: addEmployee(); break;
+            case 2: removeEmployee(); break;
+            case 3: showCustomer(); break;
+            case 4: showContract(); break;
+            default: showError("Menüpunkt "+i+" nicht bekannt."); mainmenu(); break;
         }
 
     }
