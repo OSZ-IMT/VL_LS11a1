@@ -1,7 +1,6 @@
-package de.oszimt.fian.hase.model.customer;
-import de.oszimt.fian.hase.model.HaseGmbHManagement;
+package de.oszimt.fian.hase.interfaces;
+import de.oszimt.fian.hase.model.customer.Customer;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 public interface IntCustomerMgmt {
@@ -21,7 +20,7 @@ public interface IntCustomerMgmt {
 	
 	/**
 	 * Returns a list with all customers
-	 * @return {@link ArrayList}
+	 * @return {@link Collection}
 	 */
 	Collection<Customer> getAll();
 	
@@ -41,26 +40,9 @@ public interface IntCustomerMgmt {
 	boolean delete(int id);
 
 	/**
-	 * Return the base model
-	 * @return base model
-	 */
-	HaseGmbHManagement getModel();
-
-	/**
-	 * Load the data
-	 */
-	void loadData();
-
-	/**
 	 * Return the next free id
 	 * @return next id
 	 */
 	int getNextFreeId();
-
-	/**
-	 * Return the numbers of customer
-	 * @return size
-	 */
-	int size();
 
 }

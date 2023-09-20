@@ -1,7 +1,6 @@
-package de.oszimt.fian.hase.model.employee;
-import de.oszimt.fian.hase.model.HaseGmbHManagement;
+package de.oszimt.fian.hase.interfaces;
+import de.oszimt.fian.hase.model.employee.Employee;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 public interface IntEmployeeMgmt {
@@ -22,7 +21,7 @@ public interface IntEmployeeMgmt {
 	
 	/**
 	 * Returns a list with all employees
-	 * @return {@link ArrayList}
+	 * @return {@link Collection}
 	 */
 	Collection<Employee> getAll();
 	
@@ -42,26 +41,9 @@ public interface IntEmployeeMgmt {
 	boolean delete(int id);
 
 	/**
-	 * Return the base model
-	 * @return base model
-	 */
-	HaseGmbHManagement getModel();
-
-	/**
-	 * Load the data
-	 */
-	void loadData();
-
-	/**
 	 * Return the next free id
 	 * @return next id
 	 */
 	int getNextFreeId();
-
-	/**
-	 * Return the numbers of employees
-	 * @return size
-	 */
-	int size();
 
 }

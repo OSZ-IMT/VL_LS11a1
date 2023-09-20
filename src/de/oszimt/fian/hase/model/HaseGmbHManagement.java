@@ -1,18 +1,18 @@
 package de.oszimt.fian.hase.model;
 
+import de.oszimt.fian.hase.interfaces.IntContractMgmt;
+import de.oszimt.fian.hase.interfaces.IntCustomerMgmt;
+import de.oszimt.fian.hase.interfaces.IntEmployeeMgmt;
 import de.oszimt.fian.hase.model.contract.ContractMgmt;
-import de.oszimt.fian.hase.model.contract.IntContractMgmt;
 import de.oszimt.fian.hase.model.customer.CustomerMgmt;
-import de.oszimt.fian.hase.model.customer.IntCustomerMgmt;
 import de.oszimt.fian.hase.model.employee.EmployeeMgmt;
-import de.oszimt.fian.hase.model.employee.IntEmployeeMgmt;
 import de.oszimt.fian.hase.view.IntView;
 
 public class HaseGmbHManagement {
 
-	private final IntEmployeeMgmt employee;
-	private final IntCustomerMgmt customer;
-	private final IntContractMgmt contract;
+	private final EmployeeMgmt employee;
+	private final CustomerMgmt customer;
+	private final ContractMgmt contract;
 
 	private final IntView view;
 
@@ -27,15 +27,15 @@ public class HaseGmbHManagement {
 		return view;
 	}
 
-	public IntEmployeeMgmt getEmployee() {
+	public EmployeeMgmt getEmployee() {
 		return employee;
 	}
 
-	public IntCustomerMgmt getCustomer() {
+	public CustomerMgmt getCustomer() {
 		return customer;
 	}
 
-	public IntContractMgmt getContract() {
+	public ContractMgmt getContract() {
 		return contract;
 	}
 }

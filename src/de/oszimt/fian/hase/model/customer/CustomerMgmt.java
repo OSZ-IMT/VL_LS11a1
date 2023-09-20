@@ -1,11 +1,12 @@
 package de.oszimt.fian.hase.model.customer;
 
+import de.oszimt.fian.hase.interfaces.IntCustomerMgmt;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class CustomerMgmt implements IntCustomerMgmt{
+public class CustomerMgmt implements IntCustomerMgmt {
 
     private final HaseGmbHManagement model;
 
@@ -45,7 +46,6 @@ public class CustomerMgmt implements IntCustomerMgmt{
         return false;
     }
 
-    @Override
     public HaseGmbHManagement getModel() {
         return null;
     }

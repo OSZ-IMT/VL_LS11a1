@@ -1,8 +1,7 @@
-package de.oszimt.fian.hase.model.contract;
+package de.oszimt.fian.hase.interfaces;
 import de.oszimt.fian.hase.model.ActivityRecord;
-import de.oszimt.fian.hase.model.HaseGmbHManagement;
+import de.oszimt.fian.hase.model.contract.Contract;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 public interface IntContractMgmt {
@@ -22,7 +21,7 @@ public interface IntContractMgmt {
 	
 	/**
 	 * Returns a list with all contracts
-	 * @return {@link ArrayList}
+	 * @return {@link Collection}
 	 */
 	Collection<Contract> getAll();
 	
@@ -44,26 +43,9 @@ public interface IntContractMgmt {
 	boolean delete(int id);
 
 	/**
-	 * Return the base model
-	 * @return base model
-	 */
-	HaseGmbHManagement getModel();
-
-	/**
-	 * Load the data
-	 */
-	void loadData();
-
-	/**
 	 * Return the next free id
 	 * @return next id
 	 */
 	int getNextFreeId();
-
-	/**
-	 * Return the numbers of contract
-	 * @return size
-	 */
-	int size();
 
 }

@@ -1,5 +1,6 @@
 package de.oszimt.fian.hase.model.employee;
 
+import de.oszimt.fian.hase.interfaces.IntEmployeeMgmt;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
@@ -53,7 +54,6 @@ public class EmployeeMgmt implements IntEmployeeMgmt {
 		return true;
 	}
 
-	@Override
 	public HaseGmbHManagement getModel() {
 		return model;
 	}

@@ -1,11 +1,9 @@
 package de.oszimt.fian.hase.model.contract;
 
+import de.oszimt.fian.hase.interfaces.IntContractMgmt;
 import de.oszimt.fian.hase.model.ActivityRecord;
-import de.oszimt.fian.hase.model.Address;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -52,7 +50,6 @@ public class ContractMgmt implements IntContractMgmt {
         return false;
     }
 
-    @Override
     public HaseGmbHManagement getModel() {
         return model;
     }
