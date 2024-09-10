@@ -52,6 +52,5 @@ public class Address {
 		return "Address [street=" + street + ", house=" + house + ", postalCode=" + postalCode + ", city=" + city
 				+ "]";
 	}
-	
 
 }

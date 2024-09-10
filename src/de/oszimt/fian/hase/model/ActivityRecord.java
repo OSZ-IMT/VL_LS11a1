@@ -24,11 +24,9 @@ public class ActivityRecord {
 		return date;
 	}
 
-
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-
 
 	public LocalTime getStartTime() {
 		return startTime;

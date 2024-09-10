@@ -22,6 +22,14 @@ public class ConsoleHelper {
     }
 
     /**
+     * Set the scanner, for debugging/testing only
+     * @param scanner to set
+     */
+    public static void setScanner(Scanner scanner) {
+        ConsoleHelper.scanner = scanner;
+    }
+
+    /**
      * Print as header formated
      * @param txt to show
      */
