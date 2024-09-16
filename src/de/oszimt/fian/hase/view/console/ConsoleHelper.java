@@ -1,5 +1,9 @@
 package de.oszimt.fian.hase.view.console;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -57,7 +61,7 @@ public class ConsoleHelper {
     public static int inputInt(String txt){
         System.out.printf("%s: ",txt);
         try {
-            return getScanner().nextInt();
+            return Integer.parseInt(getScanner().nextLine());
         } catch (Throwable t){
             System.out.printf("Bitte Zahl eingeben! (%s: %s)",t.getClass().getSimpleName(), t.getLocalizedMessage());
             System.out.println();
@@ -80,6 +84,23 @@ public class ConsoleHelper {
             System.out.printf("Bitte Zahl zwischen %s und %s eingeben!",min, max);
             System.out.println();
             return inputInt(txt, min, max);
+        }
+    }
+
+    /**
+     * Input a date from the user
+     * @param txt, text to show
+     * @return the date
+     */
+    public static LocalDate inputDate(String txt){
+        String dateRaw = input(txt+" (Format: TT.MM.JJJJ)");
+        DateTimeFormatter format =  new DateTimeFormatterBuilder().appendPattern("dd.MM.yyyy").toFormatter(Locale.GERMAN);
+        try {
+            return LocalDate.parse(dateRaw, format);
+        } catch (Throwable t){
+            System.out.printf("Bitte Datum im Format TT.MM.JJJJ eingeben! (%s: %s)",t.getClass().getSimpleName(), t.getLocalizedMessage());
+            System.out.println();
+            return inputDate(txt);
         }
     }
 
