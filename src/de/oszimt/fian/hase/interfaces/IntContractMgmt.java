@@ -1,5 +1,5 @@
 package de.oszimt.fian.hase.interfaces;
-import de.oszimt.fian.hase.model.ActivityRecord;
+import de.oszimt.fian.hase.model.Activity;
 import de.oszimt.fian.hase.model.contract.Contract;
 
 import java.util.Collection;
@@ -33,7 +33,7 @@ public interface IntContractMgmt {
 	 */
 	boolean update(Contract contract);
 	
-	boolean addNewWorkingRecord(int contractID, ActivityRecord aRecord);
+	boolean addNewWorkingRecord(int contractID, Activity aRecord);
 	
 	/**
 	 * Removes an existing contract

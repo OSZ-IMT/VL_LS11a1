@@ -1,7 +1,7 @@
 package de.oszimt.fian.hase.model.contract;
 
 import de.oszimt.fian.hase.interfaces.IntContractMgmt;
-import de.oszimt.fian.hase.model.ActivityRecord;
+import de.oszimt.fian.hase.model.Activity;
 import de.oszimt.fian.hase.model.HaseGmbHManagement;
 
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class ContractMgmt implements IntContractMgmt {
     }
 
     @Override
-    public boolean addNewWorkingRecord(int contractID, ActivityRecord aRecord) {
+    public boolean addNewWorkingRecord(int contractID, Activity aRecord) {
         return false;
     }
 
