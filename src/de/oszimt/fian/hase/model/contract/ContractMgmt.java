@@ -41,7 +41,7 @@ public class ContractMgmt implements IntContractMgmt {
     }
 
     @Override
-    public boolean addNewWorkingRecord(int contractID, Activity aRecord) {
+    public boolean addNewActivity(int contractID, Activity aActivity) {
         return false;
     }
 

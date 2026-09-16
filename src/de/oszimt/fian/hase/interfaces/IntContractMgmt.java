@@ -33,7 +33,7 @@ public interface IntContractMgmt {
 	 */
 	boolean update(Contract contract);
 	
-	boolean addNewWorkingRecord(int contractID, Activity aRecord);
+	boolean addNewActivity(int contractID, Activity aActivity);
 	
 	/**
 	 * Removes an existing contract
